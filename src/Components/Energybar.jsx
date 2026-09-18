@@ -43,7 +43,7 @@ function Energybar({ onResult }) {
         operatorNotes: notes.filter((n) => n.trim() !== '')
       }
 //gotta change from here
-  const res = await fetch(`${import.meta.env.VITE_API_URL}/api/optimize`, {
+ const res = await fetch('/optimize-energy', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify(payload)
