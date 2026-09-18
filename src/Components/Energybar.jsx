@@ -43,39 +43,15 @@ function Energybar({ onResult }) {
         operatorNotes: notes.filter((n) => n.trim() !== '')
       }
 //gotta change from here
-  // TEMP MOCK — remove this block once backend is live
-      await new Promise((resolve) => setTimeout(resolve, 500))
-      const mockData = {
-        optimizedSchedule: HOURS.map((hour) => ({
-          hour,
-          allocatedLoad: loads[hour] * 0.8
-        })),
-        appliedDirectives: payload.operatorNotes.map((note) => ({
-          note,
-          interpretation: 'Mock interpretation — backend not connected yet'
-        }))
-      }
-      onResult(mockData)
-      return
-      // END TEMP MOCK
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- if (!res.ok) throw new Error(`Request failed: ${res.status}`)
-
-      const data = await res.json()
-      onResult(data)
+  const res = await fetch(`${import.meta.env.VITE_API_URL}/api/optimize`, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(payload)
+})
+if (!res.ok) throw new Error(`Request failed: ${res.status}`)
+const data = await res.json()
+onResult(data)
+    
     } catch (err) {
       setError(err.message)
     } finally {
