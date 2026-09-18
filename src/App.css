@@ -1,0 +1,87 @@
+body {
+  background-color: #dfedf8;
+  margin: 0;
+}
+
+.energybar h2 {
+  font-family: 'Baskerville Old Face', Baskerville, serif;
+}
+
+.energybar p {
+  font-family: 'Baskerville Old Face', Baskerville, serif;
+}
+
+.hour-cell label {
+  font-weight: bold;
+  font-family: 'Baskerville Old Face', Baskerville, serif;
+}
+
+.hour-cell input {
+  width: 60px;
+  padding: 4px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  font-family: 'Baskerville Old Face', Baskerville, serif;
+}
+
+.notes-section {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  font-family: 'Baskerville Old Face', Baskerville, serif;
+}
+
+
+
+.energybar button {
+  background-color: #00e5ff;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-family: 'Baskerville Old Face', Baskerville, serif;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.energybar button:hover {
+  background-color: #a8f5ff;
+}
+.note-row button,
+.jsoninspector button {
+   font-family: 'Baskerville Old Face', Baskerville, serif;
+
+
+
+}
+
+.notes-section input,
+.notes-section button,
+.energybar button {
+  font-family: 'Baskerville Old Face', Baskerville, serif;
+}
+.slider-grid{
+  transition: box-shadow 0.25s ease, border-color 0.25s ease,transform 0.25s ease;
+  will-change: transform;
+}
+.slider-grid:hover {
+
+  border-color: #b6e8fa;
+  box-shadow: 0 8px 24px hsla(194, 100%, 81%, 0.992);
+  transform: translate3d(0,-2px,0);
+
+
+}
+.notes-section {
+  transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.notes-section:hover {
+  border-color: #b6e8fa;
+  box-shadow: 0 8px 24px hsla(194, 100%, 81%, 0.992);
+  transform: translate3d(0,-2px,0);
+}
